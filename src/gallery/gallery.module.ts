@@ -3,25 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
-import { GalleryComponent } from '../gallery/gallery.component';
-import {FacebookModule} from "ngx-facebook";
-
-
+import { GalleryComponent } from './gallery.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     GalleryComponent
-
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    FacebookModule.forRoot(),
     HttpModule
   ],
-  // providers: [AuthService],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [GalleryComponent],
+  exports: [GalleryComponent]
 })
-export class AppModule { }
+export class GalleryModule { }
