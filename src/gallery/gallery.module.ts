@@ -6,9 +6,7 @@ import { HttpModule } from '@angular/http';
 import { GalleryComponent } from './gallery.component';
 
 @NgModule({
-  declarations: [
-    GalleryComponent
-  ],
+
   imports: [
     BrowserModule,
     FormsModule,

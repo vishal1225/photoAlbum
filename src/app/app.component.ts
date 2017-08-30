@@ -2,9 +2,8 @@
 import {Injectable, Component, OnInit, NgZone} from '@angular/core';
 
 import {FacebookModule, FacebookService, InitParams, LoginResponse, LoginOptions} from 'ngx-facebook';
-import {Params} from "@angular/router";
 import {get} from "http";
-import {ApiMethod} from "ngx-facebook/dist/umd/providers/facebook";
+
 
 
 
@@ -68,7 +67,7 @@ export class AppComponent {
   }
 
   logout(){
-    this.fb.logout().then(() => alert('Logged out!'));
+    this.fb.logout().then(() => console.log('Logged out!'));
     this.images = [];
     this.isUser = false;
   }
